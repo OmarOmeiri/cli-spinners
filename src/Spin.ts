@@ -15,7 +15,7 @@ class Spin implements ISpin {
   private Ctext?: string
   private Cspinner: SpinnerNames = SpinnerNames.dots12
   private timeout?: NodeJS.Timer
-  private Cinterval = 300;
+  private Cinterval = 100;
 
   private setStyle(): {
     before: string,
@@ -64,7 +64,8 @@ class Spin implements ISpin {
   }
 
   /**
-   * Sets the speed of th spinner
+   * Sets the speed of th spinner.
+   * Default is 100ms.
    * @param interval
    * @returns
    */
@@ -139,19 +140,20 @@ class Spin implements ISpin {
 
     process.stderr.write('\x1B[?25l');
     const { frames } = spinners[this.Cspinner];
+
     const lng = frames.length;
-    const textLength = text?.length ? text.length + 1 : 0;
+    const textLength = this.Ctext?.length ? this.Ctext.length + 1 : 0;
     let i = 0;
     let count = 0;
     this.timeout = setInterval(() => {
       if (!count) {
         // process.stdout.cursorTo(0);
-        if (styled) process.stdout.write(`${styled.before}${`${styledText}d`}${frames[i]}${styled.after} ${styled.reset}`);
-        else process.stdout.write(`${`${styledText} `}${frames[i]}`);
+        if (styled) process.stdout.write(`${styled.before}${`${styledText}`}${frames[i]}${styled.after}${styled.reset}`);
+        else process.stdout.write(`${`${styledText}`}${frames[i]}`);
       } else {
-        process.stdout.cursorTo(textLength);
+        process.stdout.cursorTo(textLength - 1);
         process.stdout.clearLine(1);
-        if (styled) process.stdout.write(`${styled.before}${frames[i]}${styled.after} ${styled.reset}`);
+        if (styled) process.stdout.write(`${styled.before} ${frames[i]} ${styled.after}${styled.reset}`);
         else process.stdout.write(frames[i]);
       }
       i += 1;
@@ -166,9 +168,13 @@ class Spin implements ISpin {
    */
   print(text: string): void {
     this.Ctext = text;
-    const styledText = this.setStyle();
+    const styled = this.setStyle() as {
+      before: string;
+      after: string;
+      reset: string;
+  };
     // eslint-disable-next-line no-console
-    console.log(styledText);
+    console.log(`${styled.before} ${text} ${styled.after}${styled.reset}`);
   }
 }
 

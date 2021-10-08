@@ -1,5 +1,5 @@
 {
-  "name": "simple-cli-spinners",
+  "name": "simple-spinners",
   "version": "1.0.0",
   "description": "CLI Utility spinners with no dependencies.",
   "main": "dist/Spin.js",
