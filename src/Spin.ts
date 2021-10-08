@@ -110,7 +110,7 @@ class Spin implements ISpin {
    * @param text
    * @returns
    */
-  text(text: SpinnerStyles): this {
+  text(text: string): this {
     this.Ctext = text;
     return this;
   }
