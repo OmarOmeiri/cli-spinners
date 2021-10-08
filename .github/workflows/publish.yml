@@ -6,17 +6,17 @@ on:
       - master
 
 jobs:
-  publish-gpr:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
-          scope: '@OmarOmeiri'
+          registry-url: https://registry.npmjs.org/
       - run: npm install
       - run: npm run build
-      - run: npm publish
+      - run: npm run bump
+      - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
