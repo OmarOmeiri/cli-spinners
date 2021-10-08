@@ -7,22 +7,17 @@ SCS is a simple utility to print spinners to the console.
 Use the package manager [npm](https://www.npmjs.com/) to install SCS.
 
 ```bash
-npm i s-c-s
+npm i simple-spinners
 ```
 
 ## Usage
 
-```python
-import foobar
+```javascript
+import Spin from 'simple-spinners'
 
-# returns 'words'
-foobar.pluralize('word')
+Spin
+  .
 
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
 ```
 
 ## Contributing
