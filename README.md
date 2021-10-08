@@ -35,7 +35,7 @@ Spin
 Spin.stop();
 
 ```
-![Result](Animation.gif)
+![Result](https://raw.githubusercontent.com/OmarOmeiri/cli-spinners/c96b2d953f04cf526986366c73ea2bb76c1abcc0/Animation.gif)
 
 <hr/>
  You can also just print colored text
@@ -56,7 +56,7 @@ Spin
   .text('Slicker Than Snot On A Doorknob');
 
 ```
-![Result2](Screenshot.jpg)
+![Result2](https://raw.githubusercontent.com/OmarOmeiri/cli-spinners/c96b2d953f04cf526986366c73ea2bb76c1abcc0/Screenshot.jpg)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
