@@ -18,15 +18,7 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "require-jsdoc": ["error", {
-      "require": {
-          "FunctionDeclaration": true,
-          "MethodDefinition": false,
-          "ClassDeclaration": false,
-          "ArrowFunctionExpression": false,
-          "FunctionExpression": false
-      }
-    }],
+    "require-jsdoc": "off",
     "object-curly-spacing": 2,
     "linebreak-style": 0,
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
@@ -46,6 +38,7 @@
     "@typescript-eslint/no-empty-interface": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
+    "no-restricted-syntax": "off",
     "import/no-unresolved": [2, { "ignore": ["^#"] }],
     "import/extensions": [
       "warn",

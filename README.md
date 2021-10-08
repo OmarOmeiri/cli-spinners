@@ -1,21 +1,34 @@
-# Simple sample script for beautiful bash spinners
+# Simple CLI Spinners
 
-## Requirements
+SCS is a simple utility to print spinners to the console.
+
+## Installation
+
+Use the package manager [npm](https://www.npmjs.com/) to install SCS.
 
 ```bash
-sudo apt install jq wget
+npm i s-c-s
 ```
 
 ## Usage
 
-```bash
-git clone https://github.com/SteveClement/bash-spinners
-cd bash-spinners
-./spin.sh
+```python
+import foobar
+
+# returns 'words'
+foobar.pluralize('word')
+
+# returns 'geese'
+foobar.pluralize('goose')
+
+# returns 'phenomenon'
+foobar.singularize('phenomena')
 ```
 
-## Demo
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-[![asciicast](https://asciinema.org/a/240432.png)](https://asciinema.org/a/240432)
+Please make sure to update tests as appropriate.
 
-This work by [@SteveClement](https://twitter.com/SteveClement) is licensed under the Non-White-Heterosexual-Male License.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
