@@ -1,6 +1,6 @@
 {
   "name": "simple-spinners",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI Utility spinners with no dependencies.",
   "main": "dist/Spin.js",
   "author": "Omar Omeiri",

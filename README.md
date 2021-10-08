@@ -13,13 +13,12 @@ npm i simple-spinners
 ## Usage
 
 ```javascript
-import Spin from './Spin';
-import {
+import Spin, {
   SpinnerBackgrounds,
   SpinnerColors,
   SpinnerNames,
   SpinnerStyles,
-} from './typings';
+} from 'simple-spinners';
 
 Spin
   .color(SpinnerColors.blueBright)
@@ -41,13 +40,11 @@ Spin.stop();
  You can also just print colored text
 
 ```javascript
-import Spin from './Spin';
-import {
+import Spin ,{
   SpinnerBackgrounds,
   SpinnerColors,
-  SpinnerNames,
   SpinnerStyles,
-} from './typings';
+} from 'simple-spinners';
 
 Spin
   .color(SpinnerColors.blueBright)
