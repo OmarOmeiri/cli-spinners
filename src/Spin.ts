@@ -146,12 +146,12 @@ class Spin implements ISpin {
     this.timeout = setInterval(() => {
       if (!count) {
         // process.stdout.cursorTo(0);
-        if (styled) process.stdout.write(`${styled.before}${`${styledText}d`}${frames[i]}${styled.after}${styled.reset}`);
+        if (styled) process.stdout.write(`${styled.before}${`${styledText}d`}${frames[i]}${styled.after} ${styled.reset}`);
         else process.stdout.write(`${`${styledText} `}${frames[i]}`);
       } else {
         process.stdout.cursorTo(textLength);
         process.stdout.clearLine(1);
-        if (styled) process.stdout.write(`${styled.before}${frames[i]}${styled.after}${styled.reset}`);
+        if (styled) process.stdout.write(`${styled.before}${frames[i]}${styled.after} ${styled.reset}`);
         else process.stdout.write(frames[i]);
       }
       i += 1;
