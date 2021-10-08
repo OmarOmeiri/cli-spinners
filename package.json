@@ -1,13 +1,14 @@
 {
   "name": "simple-spinners",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "CLI Utility spinners with no dependencies.",
   "main": "dist/Spin.js",
   "author": "Omar Omeiri",
   "license": "MIT",
   "scripts": {
     "build": "sh ./utils/build.sh",
-    "bump": "node ./utils/bumpVersion.js"
+    "bump": "node ./utils/bumpVersion.js",
+    "pub": "sh ./utils/publish.sh"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.22.0",
