@@ -2,7 +2,7 @@
   "name": "simple-cli-spinners",
   "version": "1.0.0",
   "description": "CLI Utility spinners with no dependencies.",
-  "main": "dist/index.js",
+  "main": "dist/Spin.js",
   "author": "Omar Omeiri",
   "license": "MIT",
   "scripts": {

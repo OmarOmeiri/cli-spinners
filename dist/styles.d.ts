@@ -1,4 +1,4 @@
-import { backgroundsType, colorsType, stylesType } from './typings';
-export declare const colors: colorsType;
-export declare const backgrounds: backgroundsType;
-export declare const styles: stylesType;
+import { backgroundsType as spinnerBackgroundsType, colorsType as spinnerColorsType, stylesType as spinnerStylesType } from './typings';
+export declare const colors: spinnerColorsType;
+export declare const backgrounds: spinnerBackgroundsType;
+export declare const styles: spinnerStylesType;

@@ -1,6 +1,6 @@
-import { backgroundsType, colorsType, stylesType } from './typings';
+import { backgroundsType as spinnerBackgroundsType, colorsType as spinnerColorsType, stylesType as spinnerStylesType } from './typings';
 
-export const colors: colorsType = {
+export const colors: spinnerColorsType = {
   blue: [34, 89],
   yellow: [33, 89],
   red: [31, 89],
@@ -19,7 +19,7 @@ export const colors: colorsType = {
   whiteBright: [97, 39],
 };
 
-export const backgrounds: backgroundsType = {
+export const backgrounds: spinnerBackgroundsType = {
   bgBlack: [40, 49],
   bgRed: [41, 49],
   bgGreen: [42, 49],
@@ -39,7 +39,7 @@ export const backgrounds: backgroundsType = {
   bgWhiteBright: [107, 49],
 };
 
-export const styles: stylesType = {
+export const styles: spinnerStylesType = {
   reset: [0, 0],
   bold: [1, 22],
   dim: [2, 22],

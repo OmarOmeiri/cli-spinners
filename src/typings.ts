@@ -87,7 +87,7 @@ export type SpinnersType = {
   }
 }
 
-export enum colorsEnum {
+export enum SpinnerColors {
   blue = 'blue',
   yellow = 'yellow',
   red = 'red',
@@ -105,7 +105,7 @@ export enum colorsEnum {
   whiteBright = 'whiteBright',
 }
 
-export enum backgroundsEnum {
+export enum SpinnerBackgrounds {
   bgBlack = 'bgBlack',
   bgRed = 'bgRed',
   bgGreen = 'bgGreen',
@@ -124,7 +124,7 @@ export enum backgroundsEnum {
   bgWhiteBright = 'bgWhiteBright',
 }
 
-export enum stylesEnum {
+export enum SpinnerStyles {
   reset = 'reset',
   bold = 'bold',
   dim = 'dim',
@@ -136,22 +136,22 @@ export enum stylesEnum {
 }
 
 export type colorsType = {
-  [key in keyof typeof colorsEnum]: [number, number]
+  [key in keyof typeof SpinnerColors]: [number, number]
 }
 
 export type backgroundsType = {
-  [key in keyof typeof backgroundsEnum]: [number, number]
+  [key in keyof typeof SpinnerBackgrounds]: [number, number]
 }
 
 export type stylesType = {
-  [key in keyof typeof stylesEnum]: [number, number]
+  [key in keyof typeof SpinnerStyles]: [number, number]
 }
 
 export interface ISpin {
   spinner(name: SpinnerNames): this
-  color(color: colorsEnum): this
-  style(style: stylesEnum): this
-  bg(bg: backgroundsEnum): this
+  color(color: SpinnerColors): this
+  style(style: SpinnerStyles): this
+  bg(bg: SpinnerBackgrounds): this
   spin(): void
   stop(): void
   interval(interval: number): this

@@ -1,17 +1,17 @@
 import spinners from './spinners';
 import {
-  backgroundsEnum,
-  colorsEnum,
+  SpinnerBackgrounds,
+  SpinnerColors,
   ISpin,
   SpinnerNames,
-  stylesEnum,
+  SpinnerStyles,
 } from './typings';
 import { colors, styles, backgrounds } from './styles';
 
 class Spin implements ISpin {
-  private Ccolor?: colorsEnum
-  private Cstyle?: stylesEnum
-  private Cbg?: backgroundsEnum
+  private Ccolor?: SpinnerColors
+  private Cstyle?: SpinnerStyles
+  private Cbg?: SpinnerBackgrounds
   private Ctext?: string
   private Cspinner?: SpinnerNames
   private timeout?: NodeJS.Timer
@@ -32,7 +32,7 @@ class Spin implements ISpin {
         this.Ccolor,
         this.Cbg,
         this.Cstyle,
-      ] as (colorsEnum | stylesEnum | backgroundsEnum | undefined)[];
+      ] as (SpinnerColors | SpinnerStyles | SpinnerBackgrounds | undefined)[];
 
       stls.forEach((s) => {
         if (s) {
@@ -61,22 +61,22 @@ class Spin implements ISpin {
     return this;
   }
 
-  color(color: colorsEnum): this {
+  color(color: SpinnerColors): this {
     this.Ccolor = color;
     return this;
   }
 
-  bg(bg: backgroundsEnum): this {
+  bg(bg: SpinnerBackgrounds): this {
     this.Cbg = bg;
     return this;
   }
 
-  style(style: stylesEnum): this {
+  style(style: SpinnerStyles): this {
     this.Cstyle = style;
     return this;
   }
 
-  text(text: stylesEnum): this {
+  text(text: SpinnerStyles): this {
     this.Ctext = text;
     return this;
   }

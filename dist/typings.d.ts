@@ -85,7 +85,7 @@ export declare type SpinnersType = {
         frames: string[];
     };
 };
-export declare enum colorsEnum {
+export declare enum SpinnerColors {
     blue = "blue",
     yellow = "yellow",
     red = "red",
@@ -102,7 +102,7 @@ export declare enum colorsEnum {
     cyanBright = "cyanBright",
     whiteBright = "whiteBright"
 }
-export declare enum backgroundsEnum {
+export declare enum SpinnerBackgrounds {
     bgBlack = "bgBlack",
     bgRed = "bgRed",
     bgGreen = "bgGreen",
@@ -120,7 +120,7 @@ export declare enum backgroundsEnum {
     bgCyanBright = "bgCyanBright",
     bgWhiteBright = "bgWhiteBright"
 }
-export declare enum stylesEnum {
+export declare enum SpinnerStyles {
     reset = "reset",
     bold = "bold",
     dim = "dim",
@@ -130,19 +130,19 @@ export declare enum stylesEnum {
     strikethrough = "strikethrough"
 }
 export declare type colorsType = {
-    [key in keyof typeof colorsEnum]: [number, number];
+    [key in keyof typeof SpinnerColors]: [number, number];
 };
 export declare type backgroundsType = {
-    [key in keyof typeof backgroundsEnum]: [number, number];
+    [key in keyof typeof SpinnerBackgrounds]: [number, number];
 };
 export declare type stylesType = {
-    [key in keyof typeof stylesEnum]: [number, number];
+    [key in keyof typeof SpinnerStyles]: [number, number];
 };
 export interface ISpin {
     spinner(name: SpinnerNames): this;
-    color(color: colorsEnum): this;
-    style(style: stylesEnum): this;
-    bg(bg: backgroundsEnum): this;
+    color(color: SpinnerColors): this;
+    style(style: SpinnerStyles): this;
+    bg(bg: SpinnerBackgrounds): this;
     spin(): void;
     stop(): void;
     interval(interval: number): this;
