@@ -1,6 +1,6 @@
 # Simple Spinners
 
-SCS is a simple utility to print spinners to the console.
+SS is a simple utility to print spinners to the console.
 
 ## Installation
 
